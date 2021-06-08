@@ -22,8 +22,6 @@ namespace GuessNumberGUI
 
         private void Guessbutton_Click(object sender, EventArgs e)
         {
-
-
             int counter = int.Parse(counterLable.Text);
 
             //if (counter==0)
@@ -52,6 +50,7 @@ namespace GuessNumberGUI
             {
                 Resultlable.Text = "";
                 counter = 0;
+                value = randomGenerator.Next(1, 100);
                 counterLable.Text = "7";
             }
             else
@@ -64,6 +63,7 @@ namespace GuessNumberGUI
                 MessageBox.Show("Game Over!", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Resultlable.Text = "";
                 counter = 0;
+                value = randomGenerator.Next(1, 100);
                 counterLable.Text = "7";
             }
 
